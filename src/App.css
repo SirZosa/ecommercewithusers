@@ -237,8 +237,12 @@ input[type=number] {
   margin-top: 4rem;
 }
 
+.profile h3{
+  text-align: center;
+}
+
 .user-info{
-  width: 500px;
+  width: 90%;
   margin: 0 auto 1rem auto;
   border: 1px solid #8b8b8b;
 }
@@ -1116,6 +1120,10 @@ summary{
 
   .login .form-input{
     width: 500px;
+  }
+
+  .user-info{
+    width: 600px;
   }
 
   .Card{
