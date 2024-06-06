@@ -172,7 +172,7 @@ input[type=number] {
 }
 
 .signin-form{
-  max-width: 700px;
+  max-width: 90vw;
 }
 
 
@@ -196,11 +196,11 @@ input[type=number] {
 }
 
 .login-form{
-  max-width: 700px;
+  max-width: 90vw;
 }
 
 .login .form-input{
-  width: 500px;
+  width: 90vw;
 }
 
 .form-input-structure-login{
@@ -1104,6 +1104,18 @@ summary{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .signin-form{
+    max-width: 700px;
+  }
+
+  .login-form{
+    max-width: 700px;
+  }
+
+  .login .form-input{
+    width: 500px;
   }
 
   .Card{
