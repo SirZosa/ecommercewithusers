@@ -87,7 +87,7 @@ export default function SignUp(){
         if(confirmPassowrd === password){
             setPasswordMatch(true)
         }
-        fetch('http://localhost:1234/v1/register', {
+        fetch('https://ecommerceapi-susm.onrender.com/v1/register', {
             method:"POST",
             headers:{
                 "Content-Type": "application/json"

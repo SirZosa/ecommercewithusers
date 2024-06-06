@@ -3,7 +3,7 @@ export default function getUserInfo({next}){
     if(token){
       async function fetchData(){
         try{
-          const response = await fetch('http://localhost:1234/v1/profile',{
+          const response = await fetch('https://ecommerceapi-susm.onrender.com/v1/profile',{
             method:"GET",
             headers:{"Authorization": `Bearer ${token}`}
           })

@@ -28,7 +28,7 @@ export default function Cart(){
     function remove(id){
         if(userCart){
             const token = localStorage.getItem("myEcommerceToken")
-            fetch(`http://localhost:1234/v1/cart/${id}`,{
+            fetch(`https://ecommerceapi-susm.onrender.com/v1/cart/${id}`,{
                 method:"DELETE",
                 headers:{"Authorization": `Bearer ${token}`}
               })

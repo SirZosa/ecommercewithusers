@@ -23,7 +23,7 @@ export default function LogIn({setToken}){
     function validateForm(e){
         e.preventDefault()
         setWrongCredentials(false)
-        fetch('http://localhost:1234/v1/login', {
+        fetch('https://ecommerceapi-susm.onrender.com/v1/login', {
             method:"POST",
             headers:{
                 "Content-Type": "application/json"

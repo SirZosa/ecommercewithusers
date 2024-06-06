@@ -69,7 +69,7 @@ export default function Checkout(){
             const token = localStorage.getItem("myEcommerceToken")
             try{
                 if(token){
-                    await fetch(`http://localhost:1234/v1/orders`,{
+                    await fetch(`https://ecommerceapi-susm.onrender.com/v1/orders`,{
                         method:"POST",
                         headers:{
                             "Authorization": `Bearer ${token}`,

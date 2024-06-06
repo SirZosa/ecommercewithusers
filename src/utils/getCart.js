@@ -3,7 +3,7 @@ export default function getCart({next}){
     if(token){
       async function fetchData(){
         try{
-          const response = await fetch('http://localhost:1234/v1/cart',{
+          const response = await fetch('https://ecommerceapi-susm.onrender.com/v1/cart',{
             method:"GET",
             headers:{"Authorization": `Bearer ${token}`}
           })
