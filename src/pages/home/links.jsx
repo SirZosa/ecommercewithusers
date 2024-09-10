@@ -16,7 +16,7 @@ export default function Links(){
                 <ListLinks.link href="#">Women Accessories</ListLinks.link>
             </ListLinks>
             <ListLinks>
-                <ListLinks.title>For Her</ListLinks.title>
+                <ListLinks.title>For Him</ListLinks.title>
                 <ListLinks.link href="#">Men Jeans</ListLinks.link>
                 <ListLinks.link href="#">Men Shirts</ListLinks.link>
                 <ListLinks.link href="#">Men Jackets</ListLinks.link>
