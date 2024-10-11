@@ -9,7 +9,6 @@ export default function getOrders({next}){
           })
           if(response.status === 200){
             const data = await response.json()
-            console.log(data)
             next(data)
           }
           if(response.status === 400){

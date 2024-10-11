@@ -32,13 +32,13 @@ export default function Orders(){
     }
 
     function renderOrders(){
-        if(allItems[0] && localStorage.getItem("myEcommerceToken")){
+        if(allItems[0] && userOrder){
             return allItems?.map(order =>{
                 let total = 0
                     const orderItem = order.map(item=>{
                         total += Number(item.total)
                         return (
-                            <div className="order-item-details">
+                            <div className="order-item-details" key={uuidv4()}>
                                 <div className="order-summary">
                                     <p className='order-page-label'>Name:</p>
                                     <p className="order-page-value">{item.name}</p>
