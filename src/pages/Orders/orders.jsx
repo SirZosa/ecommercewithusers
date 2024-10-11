@@ -26,7 +26,6 @@ export default function Orders(){
             allItems[order_id].push(objeto);
           })
         allItems = Object.values(allItems)
-        console.log(allItems)
     }
     else{
         allItems = dexieItems
