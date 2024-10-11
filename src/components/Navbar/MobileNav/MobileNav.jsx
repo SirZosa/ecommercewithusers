@@ -84,6 +84,7 @@ export default function MobileNav({token}){
                     <Link onClick={()=> OpenNav()} to="category/jewelery">Accessories</Link>
                 </div>
                 <div className="MobileNav_InfoLinks">
+                    <Link onClick={()=> OpenNav()} to="orders">Orders</Link>
                     <Link onClick={()=> OpenNav()} to="#">About</Link>
                     <Link onClick={()=> OpenNav()} to="#">Contact</Link>
                 </div>

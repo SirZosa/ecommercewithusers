@@ -1,6 +1,8 @@
 import Select from 'react-select'
 import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from 'react'
+import Modal from '../../components/modal/modal'
+import ConfirmationCard from '../../components/confirmationCard'
 
 export default function SignUp(){
     const [countries, setCountries] = useState(null)
@@ -21,6 +23,7 @@ export default function SignUp(){
     const [stateInput, setStateInput] = useState(null)
     const [emailInUse, setEmailInUse] = useState(null)
     const [apiResponse, setApiResponse] = useState(null)
+    const [loading, setLoading] = useState(false)
     const [formInput, setFormInput] = useState({
         name:null,
         lastname:null,
@@ -86,6 +89,7 @@ export default function SignUp(){
         }
         if(confirmPassowrd === password){
             setPasswordMatch(true)
+            setLoading(true)
         }
         fetch('https://ecommerceapi-susm.onrender.com/v1/register', {
             method:"POST",
@@ -97,17 +101,26 @@ export default function SignUp(){
         .then(response => {
             if(response.status === 409){
                 setEmailInUse(true)
+                setLoading(false)
             }
             if(response.status === 201){
+                setLoading(false)
                 navigate('/login?registered=true')
             }
             return response.json()})
         .catch(error => {
-        console.error('Error al enviar la petición:', error);
+        console.error('Error sending the request:', error);
         })
       }
     return(
         <section className="signup">
+            {loading ? <Modal>
+                <ConfirmationCard>
+                    <p>Due to the free hosting services this process may take a while. Please wait.</p>
+                    <div className="loader"></div>
+                    <div className="lds-dual-ring"></div>
+                </ConfirmationCard>
+            </Modal> : null}
             <h1 className="singup-header">Sign Up</h1>
             <form onSubmit={validateForm} className="signin-form">
                 <div className="form-name">

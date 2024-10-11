@@ -765,7 +765,7 @@ footer{
 /*Confirmation Card sTYLE */
 .confirmation-card{
   display:flex ;
-  width: 80%;
+  width: 90%;
   aspect-ratio: 16/9;
   flex-direction: column;
   align-items: center;
@@ -773,6 +773,7 @@ footer{
   background-color: #fefefe;
   border-top: 5px solid red;
   border-radius: 4px;
+  padding: 1rem;
 }
 
 .confirmation-card h3{
@@ -1060,6 +1061,19 @@ summary{
     right: -300px;
   }
 
+  .confirmation-card{
+    display:flex ;
+    width: 50%;
+    aspect-ratio: 16/9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    border-top: 5px solid red;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
   .home{
     width: 100%;
     display: flex;
@@ -1291,7 +1305,7 @@ summary{
 
   .productPage img{
     margin: 1rem auto;
-    width: 60%;
+    max-height: 60vh;
   }
 
   .order-card, .checkoutCard{
